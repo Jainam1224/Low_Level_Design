@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Memes from "./ShimmerEffect/Memes";
 import Accordion from "./Accordion/Accordion";
+import ImageSlider from "./ImageSlider/ImageSliderAnimation";
 
 function App() {
   return (
@@ -49,6 +50,17 @@ function App() {
           >
             Accordion
           </a>
+          <a
+            style={{
+              color: "white",
+              marginTop: 0,
+              marginBottom: 0,
+              marginRight: 20,
+            }}
+            href="/slider"
+          >
+            Image Slider
+          </a>
         </nav>
       </header>
 
@@ -56,6 +68,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Memes />} />
           <Route path="/accordion" element={<Accordion />} />
+          <Route path="/slider" element={<ImageSlider />} />
         </Routes>
       </BrowserRouter>
     </div>
