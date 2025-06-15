@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Memes from "./ShimmerEffect/Memes";
+import Accordion from "./Accordion/Accordion";
 
 function App() {
   return (
@@ -15,10 +16,38 @@ function App() {
           top: 0,
         }}
       >
-        <h4 style={{ color: "white", margin: 0 }}>LLD Learning</h4>
+        <h4
+          style={{
+            color: "white",
+            marginTop: 0,
+            marginBottom: 0,
+            marginRight: 20,
+          }}
+        >
+          LLD Learning
+        </h4>
         <nav>
-          <a style={{ color: "white", margin: 0 }} href="/">
-            Memes{" "}
+          <a
+            style={{
+              color: "white",
+              marginTop: 0,
+              marginBottom: 0,
+              marginRight: 20,
+            }}
+            href="/"
+          >
+            Memes
+          </a>
+          <a
+            style={{
+              color: "white",
+              marginTop: 0,
+              marginBottom: 0,
+              marginRight: 20,
+            }}
+            href="/accordion"
+          >
+            Accordion
           </a>
         </nav>
       </header>
@@ -26,6 +55,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Memes />} />
+          <Route path="/accordion" element={<Accordion />} />
         </Routes>
       </BrowserRouter>
     </div>
