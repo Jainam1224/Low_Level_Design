@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Memes from "./ShimmerEffect/Memes";
 import Accordion from "./Accordion/Accordion";
 import ImageSlider from "./ImageSlider/ImageSliderAnimation";
+import Pagination from "./Pagination/Pagination";
 
 function App() {
   return (
@@ -61,6 +62,17 @@ function App() {
           >
             Image Slider
           </a>
+          <a
+            style={{
+              color: "white",
+              marginTop: 0,
+              marginBottom: 0,
+              marginRight: 20,
+            }}
+            href="/pagination"
+          >
+            Pagination
+          </a>
         </nav>
       </header>
 
@@ -69,6 +81,7 @@ function App() {
           <Route path="/" element={<Memes />} />
           <Route path="/accordion" element={<Accordion />} />
           <Route path="/slider" element={<ImageSlider />} />
+          <Route path="/pagination" element={<Pagination />} />
         </Routes>
       </BrowserRouter>
     </div>
